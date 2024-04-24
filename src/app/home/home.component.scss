@@ -1,3 +1,5 @@
+$primary-color: #3498db;  // Bleu
+
 .results {
   display: grid;
   column-gap: 14px;
@@ -6,7 +8,6 @@
   margin-top: 50px;
   justify-content: space-around;
 }
-
 input[type="text"] {
   border: solid 1px black;
   padding: 10px;
@@ -15,27 +16,23 @@ input[type="text"] {
   display: inline-block;
   width: 30%;
 }
-
 button {
   padding: 10px;
-  border: solid 1px black;
-  background: rgb(255, 215, 221);
-  color: grey;
+  border: solid 1px $primary-color;
+  background: $primary-color;
+  color: white;
   border-radius: 8px;
 }
-
 @media (min-width: 500px) and (max-width: 768px) {
   .results {
-    grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
   }
-
   input[type="text"] {
-    width: 70%;
-  }
+      width: 70%;
+  }   
 }
-
 @media (max-width: 499px) {
   .results {
-    grid-template-columns: 1fr;
-  }
+      grid-template-columns: 1fr;
+  }    
 }
