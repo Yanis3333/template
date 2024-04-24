@@ -1,28 +1,14 @@
+<section class="listing">
+  <img class="listing-photo" [src]="frem.photo" alt="Exterior photo of {{ frem.name }}" crossorigin />
+  <h2 class="listing-heading">{{ frem.name }}</h2>
+  <div class="loca">
+    <img src="assets/pin-map.png" height="87" width="100" />
+    <p class="listing-location">{{ frem.city }}, {{ frem.adress }}</p>
+  </div>
+</section>
 
-  <section class="listing">
-    <img
-      class="listing-photo"
-      [src]="frem.photo"
-      alt="Exterior photo of {{ frem.name }}"
-      crossorigin
-    />
-    <h2 class="listing-heading">{{ frem.name }}</h2>
-    <div class="loca">
-      <img 
-      src="assets/pin-map.png"
-      height="87"
-      width="100"/>
-      <p class="listing-location">{{ frem.city }}, {{ frem.adress }}</p>
-    </div>
-  </section>
-
-  <section class="listing">
-    <img
-      class="listing-photo"
-      [src]="airdejeu.photo"
-      alt="Exterior photo of {{ airdejeu.name }}"
-      crossorigin
-    />
-    <h2 class="listing-heading">{{ airdejeu.name }}</h2>
-    <p class="listing-location">{{ airdejeu.city }}, {{ airdejeu.adress }}</p>
-  </section>
+<section class="listing">
+  <img class="listing-photo" [src]="airdejeu.photo" alt="Exterior photo of {{ airdejeu.name }}" crossorigin />
+  <h2 class="listing-heading">{{ airdejeu.name }}</h2>
+  <p class="listing-location">{{ airdejeu.city }}, {{ airdejeu.adress }}</p>
+</section>

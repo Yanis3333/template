@@ -1,7 +1,15 @@
-import { Component } from '@angular/core';
-import { Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Airofplaylocation } from '../airofplaylocation';
+import {
+  Component
+} from '@angular/core';
+import {
+  Input
+} from '@angular/core';
+import {
+  CommonModule
+} from '@angular/common';
+import {
+  Airofplaylocation
+} from '../airofplaylocation';
 
 @Component({
   selector: 'app-air-of-play-location',
@@ -23,7 +31,7 @@ export class AirOfPlayLocationComponent {
     inspect: true,
     functional: false,
   };
-  
+
   airdejeu: Airofplaylocation = {
     id: 1,
     name: 'AireRandom',
@@ -34,6 +42,5 @@ export class AirOfPlayLocationComponent {
     inspect: true,
     functional: true,
   };
-  
-}
 
+}
