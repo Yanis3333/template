@@ -1,6 +1,15 @@
 $accent-color: #ECF8F6;
 $primary-color: #226D68;
 
+.results {
+  display: grid;
+  column-gap: 14px;
+  row-gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+  margin-top: 50px;
+  justify-content: space-around;
+}
+
 .listing {
   background: $accent-color;
   border-radius: 30px;

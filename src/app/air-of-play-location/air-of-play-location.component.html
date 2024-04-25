@@ -1,4 +1,19 @@
-<section class="listing">
+<section class="results">
+    @for (airofplay of Airofplaylocationlist; track $index) { 
+      <section class="listing">
+        <img
+          class="listing-photo"
+          [src]="airofplay.photo"
+          alt="Exterior photo of {{ airofplay.name }}"
+          crossorigin
+        />
+        <h2 class="listing-heading">{{ airofplay.name }}</h2>
+        <p class="listing-location">{{ airofplay.city }}, {{ airofplay.adress }}</p>
+      </section>
+    }
+</section>
+
+<!-- <section class="listing">
   <img class="listing-photo" [src]="frem.photo" alt="Exterior photo of {{ frem.name }}" crossorigin />
   <h2 class="listing-heading">{{ frem.name }}</h2>
   <div class="loca">
@@ -11,4 +26,4 @@
   <img class="listing-photo" [src]="airdejeu.photo" alt="Exterior photo of {{ airdejeu.name }}" crossorigin />
   <h2 class="listing-heading">{{ airdejeu.name }}</h2>
   <p class="listing-location">{{ airdejeu.city }}, {{ airdejeu.adress }}</p>
-</section>
+</section> -->
