@@ -1,6 +1,9 @@
-<header class="brand-name">
-  <img class="brand-logo" src="/assets/logojeux.webp" alt="logo" aria-hidden="true" />
-</header>
+
+<a [routerLink]="['/']">
+  <header class="brand-name">
+    <img class="brand-logo" src="/assets/logojeux.webp" alt="logo" aria-hidden="true" />
+  </header>
+</a>
 
 <section>
   <form>
@@ -8,6 +11,8 @@
     <button class="primary" type="button">Search</button>
   </form>
 </section>
+
+
 <section>
   <app-air-of-play-location></app-air-of-play-location>
 </section>

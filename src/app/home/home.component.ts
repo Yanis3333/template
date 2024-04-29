@@ -14,14 +14,16 @@ import {
 import {
   PlaygroundService
 } from '../playground.service';
+import {RouterModule} from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, AirOfPlayLocationComponent],
+  imports: [CommonModule, AirOfPlayLocationComponent, RouterModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
+
 export class HomeComponent {
- 
+  title = 'homes';
 }
