@@ -14,7 +14,9 @@ import {
 import {
   PlaygroundService
 } from '../services/playground.service';
-import {RouterModule} from '@angular/router';
+import {
+  RouterModule
+} from '@angular/router';
 
 @Component({
   selector: 'app-home',

@@ -7,7 +7,9 @@ import {
 import {
   AirOfPlayLocationComponent
 } from "./air-of-play-location/air-of-play-location.component";
-import {RouterModule} from '@angular/router';
+import {
+  RouterModule
+} from '@angular/router';
 @Component({
   selector: 'app-root',
   standalone: true,

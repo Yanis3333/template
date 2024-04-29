@@ -17,7 +17,9 @@ import {
 import {
   RouterModule
 } from '@angular/router';
-import { DetailsComponent } from '../details/details.component';
+import {
+  DetailsComponent
+} from '../details/details.component';
 
 @Component({
   selector: 'app-air-of-play-location',
