@@ -1,1 +1,19 @@
-<p>details works!</p>
+<!-- <p>details works !</p> -->
+
+<!-- <p>details works! {{ airofplay.id }}</p> -->
+
+<article>
+  <img class="listing-photo" [src]="airofplay?.photo" alt="Exterior photo of {{airofplay?.name }}" crossorigin />
+  <section class="listing-description">
+    <h2 class="listing-heading">{{ airofplay?.name }}</h2>
+    <p class="listing-location">{{ airofplay?.city }}, {{ airofplay?.adress }}</p>
+  </section>
+  <section class="listing-features">
+    <h2 class="section-heading">About this air of play</h2>
+    <ul>
+      <li>Nombre de jeux: {{ airofplay?.numberGame }}</li>
+      <li>L'air de jeu à était inspecter : {{ airofplay?.inspect }}</li>
+      <li>L'air de jeu est fonctionel : {{ airofplay?.functional }}</li>
+    </ul>
+  </section>
+</article>

@@ -3,7 +3,7 @@ import {
 } from '@angular/core';
 import {
   Airofplaylocation
-} from './airofplaylocation';
+} from '../airofplaylocation';
 
 @Injectable({
   providedIn: 'root'
@@ -33,7 +33,7 @@ export class PlaygroundService {
     },
 
     {
-      id: 1,
+      id: 2,
       name: 'AireRandom',
       city: 'Paris',
       adress: '3 rue de Paris',
@@ -44,7 +44,7 @@ export class PlaygroundService {
     },
 
     {
-      id: 1,
+      id: 3,
       name: 'AireRandom',
       city: 'Paris',
       adress: '3 rue de Paris',
@@ -55,7 +55,7 @@ export class PlaygroundService {
     },
 
     {
-      id: 1,
+      id: 4,
       name: 'AireRandom',
       city: 'Paris',
       adress: '3 rue de Paris',
@@ -66,7 +66,7 @@ export class PlaygroundService {
     },
 
     {
-      id: 1,
+      id: 5,
       name: 'AireRandom',
       city: 'Paris',
       adress: '3 rue de Paris',
@@ -77,7 +77,7 @@ export class PlaygroundService {
     },
 
     {
-      id: 1,
+      id: 6,
       name: 'AireRandom',
       city: 'Paris',
       adress: '3 rue de Paris',
@@ -88,7 +88,7 @@ export class PlaygroundService {
     },
 
     {
-      id: 1,
+      id: 7,
       name: 'AireRandom',
       city: 'Paris',
       adress: '3 rue de Paris',
@@ -99,7 +99,7 @@ export class PlaygroundService {
     },
 
     {
-      id: 1,
+      id: 8,
       name: 'AireRandom',
       city: 'Paris',
       adress: '3 rue de Paris',
@@ -110,7 +110,7 @@ export class PlaygroundService {
     },
 
     {
-      id: 1,
+      id: 9,
       name: 'AireRandom',
       city: 'Paris',
       adress: '3 rue de Paris',

@@ -13,7 +13,7 @@ import {
 } from '../airofplaylocation';
 import {
   PlaygroundService
-} from '../playground.service';
+} from '../services/playground.service';
 import {RouterModule} from '@angular/router';
 
 @Component({

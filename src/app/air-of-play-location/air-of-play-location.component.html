@@ -9,6 +9,7 @@
         />
         <h2 class="listing-heading">{{ airofplay.name }}</h2>
         <p class="listing-location">{{ airofplay.city }}, {{ airofplay.adress }}</p>
+        <a [routerLink]="['/details', airofplay.id]">Learn More</a>
       </section>
     }
 </section>

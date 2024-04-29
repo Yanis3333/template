@@ -1,5 +1,6 @@
 import {
-  Component, inject
+  Component,
+  inject
 } from '@angular/core';
 import {
   Input
@@ -10,12 +11,18 @@ import {
 import {
   Airofplaylocation
 } from '../airofplaylocation';
-import { PlaygroundService } from '../playground.service';
+import {
+  PlaygroundService
+} from '../services/playground.service';
+import {
+  RouterModule
+} from '@angular/router';
+import { DetailsComponent } from '../details/details.component';
 
 @Component({
   selector: 'app-air-of-play-location',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './air-of-play-location.component.html',
   styleUrl: './air-of-play-location.component.scss'
 })
@@ -23,131 +30,9 @@ import { PlaygroundService } from '../playground.service';
 export class AirOfPlayLocationComponent {
   Airofplaylocationlist: Airofplaylocation[] = [];
   playgroundService: PlaygroundService = inject(PlaygroundService);
+  @Input() airofplayLocation!: Airofplaylocation;
 
   constructor() {
     this.Airofplaylocationlist = this.playgroundService.getAllAirOfPlay();
   }
-  // Airofplaylocationlist: Airofplaylocation[] = [
-
-  //   {
-  //     id: 0,
-  //     name: 'Parc Fraimillion',
-  //     city: 'La férté saint Aubin',
-  //     adress: '12 rue du jardin dans l\'île',
-  //     photo: 'assets/Aire-de-jeuxOTPDB.JPG',
-  //     numberGame: 4,
-  //     inspect: true,
-  //     functional: false,
-  //   },
-  //   {
-  //     id: 1,
-  //     name: 'AireRandom',
-  //     city: 'Paris',
-  //     adress: '3 rue de Paris',
-  //     photo: 'assets/airebase.webp',
-  //     numberGame: 6,
-  //     inspect: true,
-  //     functional: true,
-  //   },
-
-  //   {
-  //     id: 1,
-  //     name: 'AireRandom',
-  //     city: 'Paris',
-  //     adress: '3 rue de Paris',
-  //     photo: 'assets/airebase.webp',
-  //     numberGame: 6,
-  //     inspect: true,
-  //     functional: true,
-  //   },
-
-  //   {
-  //     id: 1,
-  //     name: 'AireRandom',
-  //     city: 'Paris',
-  //     adress: '3 rue de Paris',
-  //     photo: 'assets/airebase.webp',
-  //     numberGame: 6,
-  //     inspect: true,
-  //     functional: true,
-  //   },
-
-  //   {
-  //     id: 1,
-  //     name: 'AireRandom',
-  //     city: 'Paris',
-  //     adress: '3 rue de Paris',
-  //     photo: 'assets/airebase.webp',
-  //     numberGame: 6,
-  //     inspect: true,
-  //     functional: true,
-  //   },
-
-  //   {
-  //     id: 1,
-  //     name: 'AireRandom',
-  //     city: 'Paris',
-  //     adress: '3 rue de Paris',
-  //     photo: 'assets/airebase.webp',
-  //     numberGame: 6,
-  //     inspect: true,
-  //     functional: true,
-  //   },
-
-  //   {
-  //     id: 1,
-  //     name: 'AireRandom',
-  //     city: 'Paris',
-  //     adress: '3 rue de Paris',
-  //     photo: 'assets/airebase.webp',
-  //     numberGame: 6,
-  //     inspect: true,
-  //     functional: true,
-  //   },
-
-  //   {
-  //     id: 1,
-  //     name: 'AireRandom',
-  //     city: 'Paris',
-  //     adress: '3 rue de Paris',
-  //     photo: 'assets/airebase.webp',
-  //     numberGame: 6,
-  //     inspect: true,
-  //     functional: true,
-  //   },
-
-  //   {
-  //     id: 1,
-  //     name: 'AireRandom',
-  //     city: 'Paris',
-  //     adress: '3 rue de Paris',
-  //     photo: 'assets/airebase.webp',
-  //     numberGame: 6,
-  //     inspect: true,
-  //     functional: true,
-  //   },
-
-  //   {
-  //     id: 1,
-  //     name: 'AireRandom',
-  //     city: 'Paris',
-  //     adress: '3 rue de Paris',
-  //     photo: 'assets/airebase.webp',
-  //     numberGame: 6,
-  //     inspect: true,
-  //     functional: true,
-  //   },
-
-  //   {
-  //     id: 1,
-  //     name: 'AireRandom',
-  //     city: 'Paris',
-  //     adress: '3 rue de Paris',
-  //     photo: 'assets/airebase.webp',
-  //     numberGame: 6,
-  //     inspect: true,
-  //     functional: true,
-  //   },    
-
-  // ]
 }
