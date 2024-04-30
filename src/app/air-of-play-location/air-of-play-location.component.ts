@@ -33,6 +33,8 @@ export class AirOfPlayLocationComponent {
   Airofplaylocationlist: Airofplaylocation[] = [];
   playgroundService: PlaygroundService = inject(PlaygroundService);
   @Input() airofplayLocation!: Airofplaylocation;
+  @Input() airofplayLocationList!: Airofplaylocation[];
+
 
   constructor() {
     this.Airofplaylocationlist = this.playgroundService.getAllAirOfPlay();

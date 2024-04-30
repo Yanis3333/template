@@ -6,11 +6,12 @@
 
 <section>
   <form>
-    <input type="text" placeholder="Filter by city" />
-    <button class="primary" type="button">Search</button>
+    <input type="text" placeholder="Filter by city" #filter/>
+    <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
   </form>
 </section>
 
 <section>
-  <app-air-of-play-location></app-air-of-play-location>
+  <!-- Plus tard, remplacer le *ngFor par @For -->
+  <app-air-of-play-location *ngFor="let airofplaylocation of filteredLocationList" [airofplayLocation]="airofplaylocation"></app-air-of-play-location>
 </section>

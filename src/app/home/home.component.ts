@@ -28,4 +28,22 @@ import {
 
 export class HomeComponent {
   title = 'homes';
+  
+  airofplayLocationList: Airofplaylocation[];
+  playgroundService: PlaygroundService = inject(PlaygroundService);
+  filteredLocationList: Airofplaylocation[] = [];
+  constructor() {
+    this.airofplayLocationList = this.playgroundService.getAllAirOfPlay();
+    this.filteredLocationList = this.airofplayLocationList;
+  }
+  filterResults(text: string) {
+    if (!text) {
+      this.filteredLocationList = this.airofplayLocationList;
+      return;
+    }
+
+    this.filteredLocationList = this.airofplayLocationList.filter((airofplayLocation) =>
+      airofplayLocation?.city.toLowerCase().includes(text.toLowerCase()),
+    );
+  }
 }

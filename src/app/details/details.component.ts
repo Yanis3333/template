@@ -21,13 +21,15 @@ import {
 import {
   HomeComponent
 } from '../home/home.component';
+import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
+
 
 @Component({
   selector: 'app-details',
   standalone: true,
   templateUrl: './details.component.html',
   styleUrl: './details.component.scss',
-  imports: [CommonModule, AirOfPlayLocationComponent, HomeComponent]
+  imports: [CommonModule, AirOfPlayLocationComponent, HomeComponent, CommonModule, ReactiveFormsModule]
 })
 
 export class DetailsComponent {
@@ -36,8 +38,21 @@ export class DetailsComponent {
   airofplay: Airofplaylocation | undefined;
   airofplayLocationId = -1;
 
+  applyForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    email: new FormControl(''),
+  });
+
   constructor() {
     const airofplayLocationId = Number(this.route.snapshot.params['id']);
     this.airofplay = this.playgroundService.getAirOfPlayById(airofplayLocationId);
+  }
+  submitApplication() {
+    this.playgroundService.submitApplication(
+      this.applyForm.value.firstName ?? '',
+      this.applyForm.value.lastName ?? '',
+      this.applyForm.value.email ?? '',
+    );
   }
 }

@@ -138,5 +138,10 @@ export class PlaygroundService {
   getAirOfPlayById(id: number): Airofplaylocation | undefined {
     return this.Airofplaylocationlist.find((airofplaylocation) => airofplaylocation.id === id);
   }
+  submitApplication(firstName: string, lastName: string, email: string) {
+    console.log(
+      `Homes application received: firstName: ${firstName}, lastName: ${lastName}, email: ${email}.`,
+    );
+  }
   constructor() {}
 }
