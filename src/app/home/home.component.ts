@@ -1,6 +1,8 @@
 import {
   Component,
-  inject
+  Input,
+  inject,
+  viewChild
 } from '@angular/core';
 import {
   CommonModule
@@ -32,18 +34,22 @@ export class HomeComponent {
   airofplayLocationList: Airofplaylocation[];
   playgroundService: PlaygroundService = inject(PlaygroundService);
   filteredLocationList: Airofplaylocation[] = [];
+  
   constructor() {
     this.airofplayLocationList = this.playgroundService.getAllAirOfPlay();
     this.filteredLocationList = this.airofplayLocationList;
   }
-  filterResults(text: string) {
-    if (!text) {
+
+  filterResults(text: string) {    
+    const finalText = text.trim().toLowerCase()
+
+    if (finalText === "") {
       this.filteredLocationList = this.airofplayLocationList;
       return;
     }
 
     this.filteredLocationList = this.airofplayLocationList.filter((airofplayLocation) =>
-      airofplayLocation?.city.toLowerCase().includes(text.toLowerCase()),
+      airofplayLocation.city.toLowerCase().includes(finalText)
     );
   }
 }

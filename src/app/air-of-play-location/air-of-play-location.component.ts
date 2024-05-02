@@ -1,6 +1,7 @@
 import {
   Component,
-  inject
+  inject,
+  input
 } from '@angular/core';
 import {
   Input
@@ -24,19 +25,15 @@ import {
 @Component({
   selector: 'app-air-of-play-location',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, DetailsComponent],
   templateUrl: './air-of-play-location.component.html',
   styleUrl: './air-of-play-location.component.scss'
 })
 
 export class AirOfPlayLocationComponent {
-  Airofplaylocationlist: Airofplaylocation[] = [];
-  playgroundService: PlaygroundService = inject(PlaygroundService);
+  // playgroundService = inject(PlaygroundService);
+
   @Input() airofplayLocation!: Airofplaylocation;
-  @Input() airofplayLocationList!: Airofplaylocation[];
-
-
-  constructor() {
-    this.Airofplaylocationlist = this.playgroundService.getAllAirOfPlay();
-  }
+  // airofplayLocation = input<Airofplaylocation>();
+  // airofplayLocation = input.required<Airofplaylocation>();
 }

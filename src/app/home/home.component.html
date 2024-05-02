@@ -8,10 +8,12 @@
   <form>
     <input type="text" placeholder="Filter by city" #filter/>
     <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
+    <!-- <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button> -->
   </form>
 </section>
 
 <section>
-  <!-- Plus tard, remplacer le *ngFor par @For -->
-  <app-air-of-play-location *ngFor="let airofplaylocation of filteredLocationList" [airofplayLocation]="airofplaylocation"></app-air-of-play-location>
+  @for(airofplaylocation of filteredLocationList; track $index) {
+    <app-air-of-play-location [airofplayLocation]="airofplaylocation"></app-air-of-play-location>
+  }
 </section>
