@@ -1,19 +1,29 @@
-<a [routerLink]="['/']">
-  <header class="brand-name">
+<header class="brand-name">
+  <a [routerLink]="['/']">
     <img class="brand-logo" src="/assets/logojeux.webp" alt="logo" aria-hidden="true" />
-  </header>
-</a>
+  </a>
+</header>
 
 <section>
-  <form>
-    <input type="text" placeholder="Filter by city" #filter/>
-    <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
-    <!-- <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button> -->
-  </form>
+  <div class="search-zone">
+    <form>
+      <input type="text" placeholder="Filter by city" #filter />
+      <button type="button" class="btn btn--green" (click)="filterResults(filter.value)">
+        <span class="btn__txt">Search</span>
+        <i class="btn__bg" aria-hidden="true"></i>
+        <i class="btn__bg" aria-hidden="true"></i>
+        <i class="btn__bg" aria-hidden="true"></i>
+        <i class="btn__bg" aria-hidden="true"></i>
+      </button>
+
+      <!-- <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button> -->
+      <!-- <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button> -->
+    </form>
+  </div>
 </section>
 
 <section>
   @for(airofplaylocation of filteredLocationList; track $index) {
-    <app-air-of-play-location [airofplayLocation]="airofplaylocation"></app-air-of-play-location>
+  <app-air-of-play-location [airofplayLocation]="airofplaylocation"></app-air-of-play-location>
   }
 </section>
